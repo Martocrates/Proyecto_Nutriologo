@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox id="fondo" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="965.0" stylesheets="@../../Style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Formulario.FXMLControllerDatosPersonales">
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label prefHeight="95.0" prefWidth="447.0" text="Datos personales">
+               <font>
+                  <Font name="System Bold" size="54.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="120.0" />
+               </HBox.margin>
+            </Label>
+            <ImageView fitHeight="100.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../imagenes/icon_corazon.JPG" />
+               </image>
+               <HBox.margin>
+                  <Insets left="100.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+         <VBox.margin>
+            <Insets bottom="30.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="315.0" prefWidth="832.0">
+         <children>
+            <VBox prefHeight="315.0" prefWidth="341.0">
+               <children>
+                  <HBox prefHeight="56.0" prefWidth="100.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="124.0" text="Nombre(S):">
+                           <font>
+                              <Font size="20.0" />
+                           </font></Label>
+                        <TextField id="txtfield" fx:id="txtFieldNombre" prefHeight="31.0" prefWidth="249.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="56.0" prefWidth="100.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="102.0" text="Apellidos:">
+                           <HBox.margin>
+                              <Insets right="11.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField id="txtfield" fx:id="txtFieldApellido" prefHeight="31.0" prefWidth="249.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="56.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Edad:">
+                           <HBox.margin>
+                              <Insets right="38.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField id="txtfield" fx:id="txtFieldEdad" prefHeight="31.0" prefWidth="249.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="56.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Sexo:">
+                           <HBox.margin>
+                              <Insets right="40.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField id="txtfield" fx:id="txtFieldSexo" prefHeight="31.0" prefWidth="249.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="56.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Carrera:">
+                           <HBox.margin>
+                              <Insets right="23.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField id="txtfield" fx:id="txtFieldCarrera" prefHeight="31.0" prefWidth="249.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="56.0" prefWidth="100.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="113.0" text="Semestre:">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField id="txtfield" fx:id="txtFieldSemestre" prefHeight="31.0" prefWidth="249.0" />
+                     </children>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="315.0" prefWidth="352.0">
+               <children>
+                  <HBox prefHeight="56.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Turno:">
+                           <HBox.margin>
+                              <Insets right="42.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField id="txtfield" fx:id="txtFieldTurno" prefHeight="31.0" prefWidth="249.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="44.0" prefWidth="352.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="280.0" text="Fecha de nacimiento:" wrapText="true">
+                           <HBox.margin>
+                              <Insets right="1.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField id="txtfield" fx:id="txtFieldFechaNacimiento" prefHeight="31.0" prefWidth="249.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="56.0" prefWidth="100.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="142.0" text="Ocupacion:">
+                           <HBox.margin>
+                              <Insets right="11.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField id="txtfield" fx:id="txtFieldOcupacion" prefHeight="31.0" prefWidth="249.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="56.0" prefWidth="100.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="114.0" text="Telefono:">
+                           <HBox.margin>
+                              <Insets right="24.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField id="txtfield" fx:id="txtFieldTelefono" prefHeight="31.0" prefWidth="249.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="56.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Email:">
+                           <HBox.margin>
+                              <Insets right="47.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField id="txtfield" fx:id="txtFieldEmail" prefHeight="31.0" prefWidth="249.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="56.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Matricula:">
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField id="txtfield" fx:id="txtFieldMatricula" prefHeight="31.0" prefWidth="249.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="btnSiguiente" mnemonicParsing="false" onAction="#SiguienteFormulario" prefHeight="74.0" prefWidth="163.0" text="Siguiente">
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#CancelarRegistro" prefHeight="74.0" prefWidth="163.0" text="Cancelar">
+               <HBox.margin>
+                  <Insets right="60.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>

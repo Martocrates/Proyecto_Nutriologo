@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox id="fondo" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="965.0" stylesheets="@../../Style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Formulario.FXMLControllerIndicadoresClinicos">
+   <children>
+      <HBox alignment="CENTER" prefHeight="67.0" prefWidth="905.0">
+         <children>
+            <Label prefHeight="85.0" prefWidth="500.0" text="Indicadores clinicos">
+               <font>
+                  <Font name="System Bold" size="54.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="120.0" />
+               </HBox.margin>
+            </Label>
+            <ImageView fitHeight="100.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../imagenes/icon_corazon.JPG" />
+               </image>
+               <HBox.margin>
+                  <Insets left="100.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <Label prefHeight="27.0" prefWidth="720.0" text="Antecedentes salud/ enfermedad/ problemas actuales">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" prefHeight="123.0" prefWidth="832.0">
+         <children>
+            <VBox prefHeight="155.0" prefWidth="380.0">
+               <children>
+                  <HBox id="hbox" prefHeight="23.0" prefWidth="260.0">
+                     <children>
+                        <Label text="Pelo:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField id="txtfield" fx:id="txtFieldPelo" prefHeight="31.0" prefWidth="243.0" />
+                     </children>
+                  </HBox>
+                  <HBox id="hbox" prefHeight="28.0" prefWidth="260.0">
+                     <children>
+                        <Label text="Uñas:">
+                           <HBox.margin>
+                              <Insets right="1.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField id="txtfield" fx:id="txtFieldUnia" prefHeight="31.0" prefWidth="236.0" />
+                     </children>
+                  </HBox>
+                  <HBox id="hbox" prefHeight="28.0" prefWidth="260.0">
+                     <children>
+                        <Label text="Piel:">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField id="txtfield" fx:id="txtFieldPiel" prefHeight="31.0" prefWidth="250.0" />
+                     </children>
+                  </HBox>
+                  <HBox id="hbox" prefHeight="0.0" prefWidth="260.0">
+                     <children>
+                        <Label text="Diarrea:">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField id="txtfield" fx:id="txtFieldDiarrea" prefHeight="31.0" prefWidth="218.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="0.0" prefWidth="260.0">
+                     <children>
+                        <Label text="Estreñimiento:">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField id="txtfield" fx:id="txtFieldEstrenimiento" prefHeight="31.0" prefWidth="160.0" />
+                     </children>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="315.0" prefWidth="352.0">
+               <children>
+                  <HBox id="hbox" prefHeight="0.0" prefWidth="271.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="73.0" text="Vómito:">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField id="txtfield" fx:id="txtFieldVomito" prefHeight="31.0" prefWidth="163.0" />
+                     </children>
+                  </HBox>
+                  <HBox id="hbox" prefHeight="0.0" prefWidth="271.0">
+                     <children>
+                        <Label prefHeight="31.0" prefWidth="73.0" text="Colitis:" wrapText="true">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField id="txtfield" fx:id="txtFieldColitis" prefHeight="31.0" prefWidth="163.0" />
+                     </children>
+                  </HBox>
+                  <HBox id="hbox" prefHeight="0.0" prefWidth="271.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="62.0" text="Pirosis:">
+                           <HBox.margin>
+                              <Insets right="11.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField id="txtfield" fx:id="txtFieldPirosis" prefHeight="31.0" prefWidth="163.0" />
+                     </children>
+                  </HBox>
+                  <HBox id="hbox" prefHeight="0.0" prefWidth="271.0">
+                     <children>
+                        <Label text="Gastritis:">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField id="txtfield" fx:id="txtFieldGastritis" prefHeight="31.0" prefWidth="160.0" />
+                     </children>
+                  </HBox>
+                  <HBox id="hbox" prefHeight="0.0" prefWidth="271.0">
+                     <children>
+                        <Label text="Úlcera:">
+                           <HBox.margin>
+                              <Insets right="16.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField id="txtfield" fx:id="txtFieldUlcera" prefHeight="31.0" prefWidth="160.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="315.0" prefWidth="352.0">
+               <children>
+                  <HBox id="hbox" prefHeight="0.0" prefWidth="271.0">
+                     <children>
+                        <Label text="Ojos:">
+                           <HBox.margin>
+                              <Insets right="62.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField id="txtfield" fx:id="txtFieldOjos" prefHeight="31.0" prefWidth="160.0" />
+                     </children>
+                  </HBox>
+                  <HBox id="hbox" prefHeight="0.0" prefWidth="271.0">
+                     <children>
+                        <Label prefHeight="31.0" prefWidth="102.0" text="Dentadura:" wrapText="true">
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField id="txtfield" fx:id="txtFieldDentadura" prefHeight="31.0" prefWidth="160.0" />
+                     </children>
+                  </HBox>
+                  <HBox id="hbox" prefHeight="0.0" prefWidth="271.0">
+                     <children>
+                        <Label text="Hidratación:">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField id="txtfield" fx:id="txtFieldHidratacion" prefHeight="31.0" prefWidth="160.0" />
+                     </children>
+                  </HBox>
+                  <HBox id="hbox" prefHeight="0.0" prefWidth="271.0">
+                     <children>
+                        <Label text="Nauseas:">
+                           <HBox.margin>
+                              <Insets right="28.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField id="txtfield" fx:id="txtFieldNauseas" prefHeight="31.0" prefWidth="160.0" />
+                     </children>
+                  </HBox>
+                  <HBox id="hbox" prefHeight="0.0" prefWidth="271.0">
+                     <children>
+                        <Label text="Otros:">
+                           <HBox.margin>
+                              <Insets right="54.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField id="txtfield" fx:id="txtFieldOtros" prefHeight="31.0" prefWidth="160.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets left="50.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <HBox prefHeight="217.0" prefWidth="527.0">
+               <children>
+                  <VBox prefHeight="217.0" prefWidth="519.0">
+                     <children>
+                        <HBox id="hbox" prefHeight="31.0" prefWidth="202.0">
+                           <children>
+                              <Label text="Enfermedad diagnosticada:">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="txtfield" fx:id="txtFieldEnfermedadDiagnosticada" prefHeight="31.0" prefWidth="160.0" />
+                           </children>
+                        </HBox>
+                        <HBox id="hbox" prefHeight="31.0" prefWidth="202.0">
+                           <children>
+                              <Label text="Toma algún medicamento:">
+                                 <HBox.margin>
+                                    <Insets right="4.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="txtfield" fx:id="txtFieldMedicamentoTomado" prefHeight="31.0" prefWidth="160.0" />
+                           </children>
+                        </HBox>
+                        <HBox id="hbox" prefHeight="31.0" prefWidth="202.0">
+                           <children>
+                              <Label text="¿Cuál?:">
+                                 <HBox.margin>
+                                    <Insets right="14.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="txtfield" fx:id="txtFieldCualMedicamentoTomado" prefHeight="31.0" prefWidth="160.0" />
+                           </children>
+                        </HBox>
+                        <HBox id="hbox" prefHeight="31.0" prefWidth="202.0">
+                           <children>
+                              <Label text="Dosis:">
+                                 <HBox.margin>
+                                    <Insets right="23.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="txtfield" fx:id="txtFieldDosisMedicamentoTomado" prefHeight="31.0" prefWidth="160.0" />
+                           </children>
+                        </HBox>
+                        <HBox id="hbox" prefHeight="31.0" prefWidth="202.0">
+                           <children>
+                              <Label text="¿Desde cuándo?">
+                                 <HBox.margin>
+                                    <Insets right="23.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="txtfield" fx:id="txtFieldDesdeCuandoMedicamento" prefHeight="31.0" prefWidth="160.0" />
+                           </children>
+                        </HBox>
+                        <HBox id="hbox" prefHeight="31.0" prefWidth="202.0">
+                           <children>
+                              <Label text="¿Le han practicado alguna cirugía?">
+                                 <HBox.margin>
+                                    <Insets right="23.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="txtfield" fx:id="txtFieldAlgunaCirugia" prefHeight="31.0" prefWidth="160.0" />
+                           </children>
+                        </HBox>
+                        <HBox id="hbox" prefHeight="31.0" prefWidth="202.0">
+                           <children>
+                              <Label text="Especificar:">
+                                 <HBox.margin>
+                                    <Insets right="23.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="txtfield" fx:id="txtFieldEspecificarCirugia" prefHeight="31.0" prefWidth="160.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </HBox>
+            <HBox prefHeight="217.0" prefWidth="371.0">
+               <children>
+                  <VBox alignment="BOTTOM_RIGHT" prefHeight="217.0" prefWidth="361.0">
+                     <children>
+                        <Button fx:id="btnAtras" mnemonicParsing="false" onAction="#AnteriorFormulario" prefHeight="74.0" prefWidth="163.0" text="Atras">
+                           <VBox.margin>
+                              <Insets bottom="30.0" />
+                           </VBox.margin>
+                        </Button>
+                        <HBox alignment="TOP_RIGHT" prefHeight="77.0" prefWidth="355.0">
+                           <children>
+                              <Button fx:id="btnSiguiente" mnemonicParsing="false" onAction="#SiguienteFormulario" prefHeight="74.0" prefWidth="163.0" text="Siguiente">
+                                 <HBox.margin>
+                                    <Insets right="30.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#CancelarRegistro" prefHeight="74.0" prefWidth="163.0" text="Cancelar">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+         <VBox.margin>
+            <Insets left="50.0" top="30.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>
