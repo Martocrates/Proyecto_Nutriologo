@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox id="fondo" alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="965.0" stylesheets="@../../Style/style_historiaclinica.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Historia_Clinica.FXMLControllerAntecedentesFamiliares">
+   <children>
+      <HBox alignment="CENTER" prefHeight="11.0" prefWidth="965.0">
+         <children>
+            <Label id="titulo" prefHeight="99.0" prefWidth="946.0" text="Historia clínica - Nutricional">
+               <font>
+                  <Font name="Impact" size="69.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="110.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets bottom="30.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <VBox prefHeight="331.0" prefWidth="469.0">
+               <children>
+                  <HBox prefHeight="14.0" prefWidth="279.0">
+                     <children>
+                        <Label id="subtitulo" text="Antecedentes familiares" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="14.0" prefWidth="279.0">
+                     <children>
+                        <Label text="Obesidad:" />
+                        <Text fx:id="txtObesidad" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="449.0">
+                     <children>
+                        <Label text="Diabetes:" />
+                        <Text fx:id="txtDiabetes" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="14.0" prefWidth="279.0">
+                     <children>
+                        <Label text="HTA:" />
+                        <Text fx:id="txtHTA" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets left="60.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="331.0" prefWidth="498.0">
+               <children>
+                  <HBox prefHeight="14.0" prefWidth="279.0">
+                     <children>
+                        <Label text="Cáncer:" />
+                        <Text fx:id="txtCancer" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="14.0" prefWidth="279.0">
+                     <children>
+                        <Label text="Hipercolesterolemia:" />
+                        <Text fx:id="txtHipercolesterolemia" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="14.0" prefWidth="279.0">
+                     <children>
+                        <Label text="Hipertrigliceridemia:" />
+                        <Text fx:id="txtHipertrigliceridemia" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets top="60.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <VBox prefHeight="291.0" prefWidth="893.0">
+               <children>
+                  <HBox prefHeight="14.0" prefWidth="279.0">
+                     <children>
+                        <Label id="subtitulo" text="Datos antropologicos" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="579.0">
+                     <children>
+                        <Label text="Peso:" />
+                        <Text fx:id="txtPeso" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="449.0">
+                     <children>
+                        <Label text="Talla:" />
+                        <Text fx:id="txtTalla" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="14.0" prefWidth="279.0">
+                     <children>
+                        <Label text="IMC:" />
+                        <Text fx:id="txtIMC" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="14.0" prefWidth="279.0">
+                     <children>
+                        <Label text="Perímetro de cintura:" />
+                        <Text fx:id="txtPerimetroCintura" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="14.0" prefWidth="279.0">
+                     <children>
+                        <Label text="Perímetro Cadera:" />
+                        <Text fx:id="txtPerimetroCadera" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="14.0" prefWidth="279.0">
+                     <children>
+                        <Label text="ICC:" />
+                        <Text fx:id="txtICC" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="172.0" prefWidth="965.0">
+               <children>
+                  <Button fx:id="btnAtras" mnemonicParsing="false" onAction="#AnteriorFormulario" text="Atras">
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnSalir" mnemonicParsing="false" onAction="#SalirFormulario" text="Salir">
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnSiguiente" mnemonicParsing="false" onAction="#SiguienteFormulario" text="Siguiente">
+                     <HBox.margin>
+                        <Insets right="60.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <VBox.margin>
+            <Insets left="60.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>

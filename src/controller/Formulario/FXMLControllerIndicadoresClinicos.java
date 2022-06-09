@@ -25,6 +25,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
+import model.Paciente;
 import model.Usuario;
 
 import javax.swing.JOptionPane;
@@ -37,7 +38,7 @@ import sun.util.logging.PlatformLogger.Level;
  */
 public class FXMLControllerIndicadoresClinicos implements Initializable {
     
-	Usuario usuario = new Usuario();
+	Paciente paciente = new Paciente();
     
 
     
@@ -86,62 +87,81 @@ public class FXMLControllerIndicadoresClinicos implements Initializable {
     
   
     private void GuardarRespuestasFormulario() {
-    	/*
-    	@FXML private TextField txtFieldPelo;
-        @FXML private TextField txtFieldUnia;
-        @FXML private TextField txtFieldPiel;
-        @FXML private TextField txtFieldDiarrea;
-        @FXML private TextField txtFieldEstrenimiento;
+    	
+    	paciente.setPelo(txtFieldPelo.getText());
+        paciente.setUnias(txtFieldUnia.getText());
+        paciente.setPiel(txtFieldPiel.getText());
+        paciente.setDiarrea(txtFieldDiarrea.getText());
+        paciente.setEstrenimiento(txtFieldEstrenimiento.getText());
         
-        @FXML private TextField  txtFieldVomito;
-        @FXML private TextField txtFieldColitis;
-        @FXML private TextField txtFieldPirosis;
-        @FXML private TextField txtFieldGastritis;
-        @FXML private TextField txtFieldUlcera;
+        paciente.setVomito(txtFieldVomito.getText());
+        paciente.setColitis(txtFieldColitis.getText());
+        paciente.setPirosis(txtFieldPirosis.getText());
+        paciente.setGastritis(txtFieldGastritis.getText());
+        paciente.setUlcera(txtFieldUlcera.getText());
         
-        @FXML private TextField txtFieldOjos;
-        @FXML private TextField txtFieldDentadura;
-        @FXML private TextField txtFieldHidratacion;
-        @FXML private TextField txtFieldNauseas;
-        @FXML private TextField txtFieldOtros;
+        paciente.setOjos(txtFieldOjos.getText());
+        paciente.setDentadura(txtFieldDentadura.getText());
+        paciente.setHidratacion(txtFieldHidratacion.getText());
+        paciente.setNauseas(txtFieldNauseas.getText());
+        paciente.setOtrosDatosClinicos(txtFieldOtros.getText());
         
-        txtFieldEnfermedadDiagnosticada;
-        txtFieldMedicamentoTomado;
-        txtFieldCualMedicamentoTomado;
-        txtFieldDosisMedicamentoTomado;
-        txtFieldDesdeCuandoMedicamento;
-        txtFieldAlgunaCirugia;
-        txtFieldEspecificarCirugia; */
+        paciente.setEnfermedadDiagnosticada(txtFieldEnfermedadDiagnosticada.getText());
+        paciente.setTomaAlgunMedicamento(txtFieldMedicamentoTomado.getText());
+        paciente.setCualMedicamentoToma(txtFieldCualMedicamentoTomado.getText());
+        paciente.setDosisMedicamento(txtFieldDosisMedicamentoTomado.getText());
+        
+        paciente.setDesdeCuandoMedicamento(txtFieldDesdeCuandoMedicamento.getText());
+        paciente.setCirugiasPracticadas(txtFieldAlgunaCirugia.getText());
+        paciente.setEspecificarCirugias(txtFieldEspecificarCirugia.getText());
         
     }
     
     public void ObtenerRespuestaFormulario() {
     	
     	
+    	txtFieldPelo.setText(paciente.getPelo());
+        txtFieldUnia.setText(paciente.getUnias());
+        txtFieldPiel.setText(paciente.getPiel());
+        txtFieldDiarrea.setText(paciente.getDiarrea());
+        txtFieldEstrenimiento.setText(paciente.getEstrenimiento());
+        
+        txtFieldVomito.setText(paciente.getVomito());
+        txtFieldColitis.setText(paciente.getColitis());
+        txtFieldPirosis.setText(paciente.getPirosis());
+        txtFieldGastritis.setText(paciente.getGastritis());
+        txtFieldUlcera.setText(paciente.getUlcera());
+        
+        txtFieldOjos.setText(paciente.getOjos());
+        txtFieldDentadura.setText(paciente.getDentadura());
+        txtFieldHidratacion.setText(paciente.getHidratacion());
+        txtFieldNauseas.setText(paciente.getNauseas());
+        txtFieldOtros.setText(paciente.getOtrosDatosClinicos());
+        
+        txtFieldEnfermedadDiagnosticada.setText(paciente.getEnfermedadDiagnosticada());
+        txtFieldMedicamentoTomado.setText(paciente.getTomaAlgunMedicamento());
+        txtFieldCualMedicamentoTomado.setText(paciente.getCualMedicamentoToma());
+        txtFieldDosisMedicamentoTomado.setText(paciente.getDosisMedicamento());
+        txtFieldDesdeCuandoMedicamento.setText(paciente.getDesdeCuandoMedicamento());
+        txtFieldAlgunaCirugia.setText(paciente.getCirugiasPracticadas());
+        txtFieldEspecificarCirugia.setText(paciente.getEspecificarCirugias());
+        
     }
     
-private void loadStage(String url, Event event){
-    
-    try{
-        ((Node)(event.getSource())).getScene().getWindow().hide();
+    private void loadStage(String url, Event event){
         
-        Parent root = FXMLLoader.load(getClass().getResource(url));
-        Scene scene = new Scene(root);
-        Stage newStage = new Stage();
-        newStage.setScene(scene);
-        newStage.show();
-        
-        newStage.setOnCloseRequest(new EventHandler<WindowEvent>(){
-            @Override
-            public void handle(WindowEvent event){
-                Platform.exit();
-            }
-        });
-        
-    }catch(IOException ex){
-      //  Logger.getLogger(ViewLoginController.class.getName()).log(Level.SEVERE,null,ex);
-    }
-}
+   	 try {
+
+   	        Parent root = FXMLLoader.load(getClass().getResource(url));
+   	        Scene scene = new Scene(root);
+   	        Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+   	        appStage.setScene(scene);
+   	        appStage.toFront();
+   	        appStage.show();
+
+   	    } catch (Exception e) {
+   	    }
+   }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {

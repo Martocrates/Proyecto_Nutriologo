@@ -2,7 +2,7 @@ package model;
 
 public class Usuario {
 	
-	private int idUsuario;
+	private static int idUsuario;
 	private static String nombre;
 	private static String apellido;
 	private static String cargo;

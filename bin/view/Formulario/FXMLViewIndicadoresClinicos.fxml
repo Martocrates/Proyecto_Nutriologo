@@ -51,7 +51,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <TextField id="txtfield" prefHeight="31.0" prefWidth="243.0" />
+                        <TextField id="txtfield" fx:id="txtFieldPelo" prefHeight="31.0" prefWidth="243.0" />
                      </children>
                   </HBox>
                   <HBox id="hbox" prefHeight="28.0" prefWidth="260.0">
@@ -64,7 +64,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <TextField id="txtfield" prefHeight="31.0" prefWidth="236.0" />
+                        <TextField id="txtfield" fx:id="txtFieldUnia" prefHeight="31.0" prefWidth="236.0" />
                      </children>
                   </HBox>
                   <HBox id="hbox" prefHeight="28.0" prefWidth="260.0">
@@ -77,7 +77,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <TextField id="txtfield" prefHeight="31.0" prefWidth="250.0" />
+                        <TextField id="txtfield" fx:id="txtFieldPiel" prefHeight="31.0" prefWidth="250.0" />
                      </children>
                   </HBox>
                   <HBox id="hbox" prefHeight="0.0" prefWidth="260.0">
@@ -90,7 +90,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <TextField id="txtfield" prefHeight="31.0" prefWidth="218.0" />
+                        <TextField id="txtfield" fx:id="txtFieldDiarrea" prefHeight="31.0" prefWidth="218.0" />
                      </children>
                   </HBox>
                   <HBox prefHeight="0.0" prefWidth="260.0">
@@ -103,7 +103,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <TextField id="txtfield" prefHeight="31.0" prefWidth="160.0" />
+                        <TextField id="txtfield" fx:id="txtFieldEstrenimiento" prefHeight="31.0" prefWidth="160.0" />
                      </children>
                   </HBox>
                </children>
@@ -123,7 +123,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <TextField id="txtfield" prefHeight="31.0" prefWidth="163.0" />
+                        <TextField id="txtfield" fx:id="txtFieldVomito" prefHeight="31.0" prefWidth="163.0" />
                      </children>
                   </HBox>
                   <HBox id="hbox" prefHeight="0.0" prefWidth="271.0">
@@ -136,7 +136,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <TextField id="txtfield" prefHeight="31.0" prefWidth="163.0" />
+                        <TextField id="txtfield" fx:id="txtFieldColitis" prefHeight="31.0" prefWidth="163.0" />
                      </children>
                   </HBox>
                   <HBox id="hbox" prefHeight="0.0" prefWidth="271.0">
@@ -149,7 +149,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <TextField id="txtfield" prefHeight="31.0" prefWidth="163.0" />
+                        <TextField id="txtfield" fx:id="txtFieldPirosis" prefHeight="31.0" prefWidth="163.0" />
                      </children>
                   </HBox>
                   <HBox id="hbox" prefHeight="0.0" prefWidth="271.0">
@@ -162,7 +162,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <TextField id="txtfield" prefHeight="31.0" prefWidth="160.0" />
+                        <TextField id="txtfield" fx:id="txtFieldGastritis" prefHeight="31.0" prefWidth="160.0" />
                      </children>
                   </HBox>
                   <HBox id="hbox" prefHeight="0.0" prefWidth="271.0">
@@ -175,7 +175,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <TextField id="txtfield" prefHeight="31.0" prefWidth="160.0" />
+                        <TextField id="txtfield" fx:id="txtFieldUlcera" prefHeight="31.0" prefWidth="160.0" />
                      </children>
                   </HBox>
                </children>
@@ -192,7 +192,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <TextField id="txtfield" prefHeight="31.0" prefWidth="160.0" />
+                        <TextField id="txtfield" fx:id="txtFieldOjos" prefHeight="31.0" prefWidth="160.0" />
                      </children>
                   </HBox>
                   <HBox id="hbox" prefHeight="0.0" prefWidth="271.0">
@@ -205,7 +205,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <TextField id="txtfield" prefHeight="31.0" prefWidth="160.0" />
+                        <TextField id="txtfield" fx:id="txtFieldDentadura" prefHeight="31.0" prefWidth="160.0" />
                      </children>
                   </HBox>
                   <HBox id="hbox" prefHeight="0.0" prefWidth="271.0">
@@ -218,7 +218,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <TextField id="txtfield" prefHeight="31.0" prefWidth="160.0" />
+                        <TextField id="txtfield" fx:id="txtFieldHidratacion" prefHeight="31.0" prefWidth="160.0" />
                      </children>
                   </HBox>
                   <HBox id="hbox" prefHeight="0.0" prefWidth="271.0">
@@ -231,7 +231,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <TextField id="txtfield" prefHeight="31.0" prefWidth="160.0" />
+                        <TextField id="txtfield" fx:id="txtFieldNauseas" prefHeight="31.0" prefWidth="160.0" />
                      </children>
                   </HBox>
                   <HBox id="hbox" prefHeight="0.0" prefWidth="271.0">
@@ -244,7 +244,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <TextField id="txtfield" prefHeight="31.0" prefWidth="160.0" />
+                        <TextField id="txtfield" fx:id="txtFieldOtros" prefHeight="31.0" prefWidth="160.0" />
                      </children>
                   </HBox>
                </children>
@@ -270,7 +270,7 @@
                                     <Font size="20.0" />
                                  </font>
                               </Label>
-                              <TextField id="txtfield" prefHeight="31.0" prefWidth="160.0" />
+                              <TextField id="txtfield" fx:id="txtFieldEnfermedadDiagnosticada" prefHeight="31.0" prefWidth="160.0" />
                            </children>
                         </HBox>
                         <HBox id="hbox" prefHeight="31.0" prefWidth="202.0">
@@ -283,7 +283,7 @@
                                     <Font size="20.0" />
                                  </font>
                               </Label>
-                              <TextField id="txtfield" prefHeight="31.0" prefWidth="160.0" />
+                              <TextField id="txtfield" fx:id="txtFieldMedicamentoTomado" prefHeight="31.0" prefWidth="160.0" />
                            </children>
                         </HBox>
                         <HBox id="hbox" prefHeight="31.0" prefWidth="202.0">
@@ -296,7 +296,7 @@
                                     <Font size="20.0" />
                                  </font>
                               </Label>
-                              <TextField id="txtfield" prefHeight="31.0" prefWidth="160.0" />
+                              <TextField id="txtfield" fx:id="txtFieldCualMedicamentoTomado" prefHeight="31.0" prefWidth="160.0" />
                            </children>
                         </HBox>
                         <HBox id="hbox" prefHeight="31.0" prefWidth="202.0">
@@ -309,7 +309,7 @@
                                     <Font size="20.0" />
                                  </font>
                               </Label>
-                              <TextField id="txtfield" prefHeight="31.0" prefWidth="160.0" />
+                              <TextField id="txtfield" fx:id="txtFieldDosisMedicamentoTomado" prefHeight="31.0" prefWidth="160.0" />
                            </children>
                         </HBox>
                         <HBox id="hbox" prefHeight="31.0" prefWidth="202.0">
@@ -322,7 +322,7 @@
                                     <Font size="20.0" />
                                  </font>
                               </Label>
-                              <TextField id="txtfield" prefHeight="31.0" prefWidth="160.0" />
+                              <TextField id="txtfield" fx:id="txtFieldDesdeCuandoMedicamento" prefHeight="31.0" prefWidth="160.0" />
                            </children>
                         </HBox>
                         <HBox id="hbox" prefHeight="31.0" prefWidth="202.0">
@@ -335,7 +335,7 @@
                                     <Font size="20.0" />
                                  </font>
                               </Label>
-                              <TextField id="txtfield" prefHeight="31.0" prefWidth="160.0" />
+                              <TextField id="txtfield" fx:id="txtFieldAlgunaCirugia" prefHeight="31.0" prefWidth="160.0" />
                            </children>
                         </HBox>
                         <HBox id="hbox" prefHeight="31.0" prefWidth="202.0">
@@ -348,7 +348,7 @@
                                     <Font size="20.0" />
                                  </font>
                               </Label>
-                              <TextField id="txtfield" prefHeight="31.0" prefWidth="160.0" />
+                              <TextField id="txtfield" fx:id="txtFieldEspecificarCirugia" prefHeight="31.0" prefWidth="160.0" />
                            </children>
                         </HBox>
                      </children>

@@ -68,7 +68,7 @@ public class FXMLControllerDatosPersonales implements Initializable {
     @FXML private void SiguienteFormulario(ActionEvent event) {
     	
     	
-    	paciente.setMatriculaPaciente(txtFieldMatricula.getText());
+    	paciente.setMatriculaPaciente(Integer.parseInt(txtFieldMatricula.getText()));
     	paciente.setNombrePaciente(txtFieldNombre.getText());
     	paciente.setApellidoPaciente(txtFieldApellido.getText());	
     	LocalDate todaysDate = LocalDate.now();
@@ -92,28 +92,20 @@ public class FXMLControllerDatosPersonales implements Initializable {
   
     
     
-private void loadStage(String url, Event event){
-    
-    try{
-        ((Node)(event.getSource())).getScene().getWindow().hide();
+    private void loadStage(String url, Event event){
         
-        Parent root = FXMLLoader.load(getClass().getResource(url));
-        Scene scene = new Scene(root);
-        Stage newStage = new Stage();
-        newStage.setScene(scene);
-        newStage.show();
-        
-        newStage.setOnCloseRequest(new EventHandler<WindowEvent>(){
-            @Override
-            public void handle(WindowEvent event){
-                Platform.exit();
-            }
-        });
-        
-    }catch(IOException ex){
-      //  Logger.getLogger(ViewLoginController.class.getName()).log(Level.SEVERE,null,ex);
-    }
-}
+   	 try {
+
+   	        Parent root = FXMLLoader.load(getClass().getResource(url));
+   	        Scene scene = new Scene(root);
+   	        Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+   	        appStage.setScene(scene);
+   	        appStage.toFront();
+   	        appStage.show();
+
+   	    } catch (Exception e) {
+   	    }
+   }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -131,7 +123,7 @@ private void loadStage(String url, Event event){
     	txtFieldOcupacion.setText(paciente.getOcupacion());
     	txtFieldTelefono.setText(paciente.getTelefono());
     	txtFieldEmail.setText(paciente.getEmail());
-    	txtFieldMatricula.setText(paciente.getMatriculaPaciente());
+    	txtFieldMatricula.setText(paciente.getMatriculaPaciente()+"");
     }    
     
 }

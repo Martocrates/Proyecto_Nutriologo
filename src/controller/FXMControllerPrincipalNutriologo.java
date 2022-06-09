@@ -62,28 +62,20 @@ public class FXMControllerPrincipalNutriologo {
     	loadStage("/view/Formulario/FXMLViewDatosPersonales.fxml",event);
     }
     
-private void loadStage(String url, Event event){
-    
-    try{
-        ((Node)(event.getSource())).getScene().getWindow().hide();
+    private void loadStage(String url, Event event){
         
-        Parent root = FXMLLoader.load(getClass().getResource(url));
-        Scene scene = new Scene(root);
-        Stage newStage = new Stage();
-        newStage.setScene(scene);
-        newStage.show();
-        
-        newStage.setOnCloseRequest(new EventHandler<WindowEvent>(){
-            @Override
-            public void handle(WindowEvent event){
-                Platform.exit();
-            }
-        });
-        
-    }catch(IOException ex){
-      //  Logger.getLogger(ViewLoginController.class.getName()).log(Level.SEVERE,null,ex);
-    }
-}
+   	 try {
+
+   	        Parent root = FXMLLoader.load(getClass().getResource(url));
+   	        Scene scene = new Scene(root);
+   	        Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+   	        appStage.setScene(scene);
+   	        appStage.toFront();
+   	        appStage.show();
+
+   	    } catch (Exception e) {
+   	    }
+   }
     
     
     public void initialize(URL url, ResourceBundle rb) {

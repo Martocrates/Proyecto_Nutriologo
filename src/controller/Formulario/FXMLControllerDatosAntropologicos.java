@@ -79,36 +79,28 @@ public class FXMLControllerDatosAntropologicos implements Initializable {
     }
     private void GuardarRespuestasFormulario() {
   //  	Double.parseDouble()
-    	   	paciente.setPeso(Double.parseDouble(txtFieldPeso.getText()));
-    	    paciente.setTalla(Double.parseDouble(txtFieldTalla.getText()));
-    	    paciente.setImc(Double.parseDouble(txtFieldIMC.getText()));
-    	    paciente.setPerimetroCintura(Double.parseDouble(txtFieldPerimetroCintura.getText()));
-    	    paciente.setPerimetroCadera(Double.parseDouble(txtFieldPerimetroCadera.getText()));
-    	    paciente.setIcc(Double.parseDouble(txtFieldICC.getText()));
+    	   	paciente.setPeso(Float.parseFloat(txtFieldPeso.getText()));
+    	    paciente.setTalla(Float.parseFloat(txtFieldTalla.getText()));
+    	    paciente.setImc(Float.parseFloat(txtFieldIMC.getText()));
+    	    paciente.setPerimetroCintura(Float.parseFloat(txtFieldPerimetroCintura.getText()));
+    	    paciente.setPerimetroCadera(Float.parseFloat(txtFieldPerimetroCadera.getText()));
+    	    paciente.setIcc(Float.parseFloat(txtFieldICC.getText()));
     	
     }
-private void loadStage(String url, Event event){
-    
-    try{
-        ((Node)(event.getSource())).getScene().getWindow().hide();
+    private void loadStage(String url, Event event){
         
-        Parent root = FXMLLoader.load(getClass().getResource(url));
-        Scene scene = new Scene(root);
-        Stage newStage = new Stage();
-        newStage.setScene(scene);
-        newStage.show();
-        
-        newStage.setOnCloseRequest(new EventHandler<WindowEvent>(){
-            @Override
-            public void handle(WindowEvent event){
-                Platform.exit();
-            }
-        });
-        
-    }catch(IOException ex){
-      //  Logger.getLogger(ViewLoginController.class.getName()).log(Level.SEVERE,null,ex);
-    }
-}
+   	 try {
+
+   	        Parent root = FXMLLoader.load(getClass().getResource(url));
+   	        Scene scene = new Scene(root);
+   	        Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+   	        appStage.setScene(scene);
+   	        appStage.toFront();
+   	        appStage.show();
+
+   	    } catch (Exception e) {
+   	    }
+   }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {

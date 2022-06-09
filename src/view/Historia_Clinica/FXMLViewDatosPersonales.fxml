@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox id="fondo" alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="965.0" stylesheets="@../../Style/style_historiaclinica.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Historia_Clinica.FXMLControllerDatosPersonales">
+   <children>
+      <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Text fx:id="txtFecha" strokeType="OUTSIDE" strokeWidth="0.0" text=" 14/05/2022" wrappingWidth="156.775390625" />
+            <ImageView fitHeight="100.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../imagenes/icon_corazon.JPG" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="85.0" prefWidth="874.0">
+         <children>
+            <Label id="titulo" prefHeight="99.0" prefWidth="946.0" text="Historia clínica - Nutricional">
+               <font>
+                  <Font name="Impact" size="69.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="110.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets bottom="30.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <VBox prefHeight="331.0" prefWidth="469.0">
+               <children>
+                  <HBox prefHeight="14.0" prefWidth="279.0">
+                     <children>
+                        <Label id="subtitulo" text="Datos personales" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="14.0" prefWidth="279.0">
+                     <children>
+                        <Label text="Expediente " />
+                        <Text fx:id="txtExpediente" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="449.0">
+                     <children>
+                        <Label text="Nombre(s):" />
+                        <Text fx:id="txtNombre" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="14.0" prefWidth="279.0">
+                     <children>
+                        <Label text="Apellidos:" />
+                        <Text fx:id="txtApellido" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="14.0" prefWidth="279.0">
+                     <children>
+                        <Label text="Edad:" />
+                        <Text fx:id="txtEdad" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="14.0" prefWidth="279.0">
+                     <children>
+                        <Label text="Sexo:" />
+                        <Text fx:id="txtSexo" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="14.0" prefWidth="279.0">
+                     <children>
+                        <Label text="Carrera:" />
+                        <Text fx:id="txtCarrera" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="14.0" prefWidth="279.0">
+                     <children>
+                        <Label text="Semestre:" />
+                        <Text fx:id="txtSemestre" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets left="60.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="331.0" prefWidth="498.0">
+               <children>
+                  <HBox prefHeight="14.0" prefWidth="279.0">
+                     <children>
+                        <Label text="Turno:" />
+                        <Text fx:id="txtTurno" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="14.0" prefWidth="279.0">
+                     <children>
+                        <Label text="Fecha de nacimiento:" />
+                        <Text fx:id="txtFechaNacimiento" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="14.0" prefWidth="279.0">
+                     <children>
+                        <Label text="Ocupación:" />
+                        <Text fx:id="txtOcupacion" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="14.0" prefWidth="279.0">
+                     <children>
+                        <Label text="Teléfono:" />
+                        <Text fx:id="txtTelefono" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="14.0" prefWidth="279.0">
+                     <children>
+                        <Label text="Email:" />
+                        <Text fx:id="txtEmail" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets top="60.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="btnSalir" mnemonicParsing="false" onAction="#SalirFormulario" text="Salir">
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnSiguiente" mnemonicParsing="false" onAction="#SiguienteFormulario" text="Siguiente">
+               <HBox.margin>
+                  <Insets right="60.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>

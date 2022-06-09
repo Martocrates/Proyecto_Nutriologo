@@ -47,7 +47,7 @@ public class Paciente {
 	private static String nombrePaciente;
 	private static String fechaPaciente;
 	private static String apellidoPaciente;
-	private static String matriculaPaciente;
+	private static int matriculaPaciente;
 	private static int edad;
 	private static String sexo;
 	private static String carrera;
@@ -67,12 +67,12 @@ public class Paciente {
 	private static String Hipertrigliceridemia;
 	
 	/*Datos antropologicos*/
-	private static double peso;
-	private static double talla;
-	private static double imc;
-	private static double perimetroCintura;
-	private static double perimetroCadera;
-	private static double icc;
+	private static float peso;
+	private static float talla;
+	private static float imc;
+	private static float perimetroCintura;
+	private static float perimetroCadera;
+	private static float icc;
 	
 	/*Datos bioquimicos*/
 	private static String consumoTabaco;
@@ -111,7 +111,7 @@ public class Paciente {
 	private static String tomaAlgunMedicamento;
 	private static String cualMedicamentoToma;
 	private static String dosisMedicamento;
-	private static String comienzoMedicamento;
+	private static String desdeCuandoMedicamento;
 	private static String cirugiasPracticadas;
 	private static String especificarCirugias;
 	
@@ -143,10 +143,10 @@ public class Paciente {
 	public void setApellidoPaciente(String apellidoPaciente) {
 		Paciente.apellidoPaciente = apellidoPaciente;
 	}
-	public String getMatriculaPaciente() {
+	public int getMatriculaPaciente() {
 		return matriculaPaciente;
 	}
-	public void setMatriculaPaciente(String matriculaPaciente) {
+	public void setMatriculaPaciente(int matriculaPaciente) {
 		Paciente.matriculaPaciente = matriculaPaciente;
 	}
 
@@ -271,51 +271,51 @@ public class Paciente {
 		Hipertrigliceridemia = hipertrigliceridemia;
 	}
 
-	public double getPeso() {
+	public float getPeso() {
 		return peso;
 	}
 
-	public void setPeso(double peso) {
+	public void setPeso(float peso) {
 		this.peso = peso;
 	}
 
-	public double getTalla() {
+	public float getTalla() {
 		return talla;
 	}
 
-	public void setTalla(double talla) {
+	public void setTalla(float talla) {
 		this.talla = talla;
 	}
 
-	public double getImc() {
+	public float getImc() {
 		return imc;
 	}
 
-	public void setImc(double imc) {
+	public void setImc(float imc) {
 		this.imc = imc;
 	}
 
-	public double getPerimetroCintura() {
+	public float getPerimetroCintura() {
 		return perimetroCintura;
 	}
 
-	public void setPerimetroCintura(double perimetroCintura) {
+	public void setPerimetroCintura(float perimetroCintura) {
 		this.perimetroCintura = perimetroCintura;
 	}
 
-	public double getPerimetroCadera() {
+	public float getPerimetroCadera() {
 		return perimetroCadera;
 	}
 
-	public void setPerimetroCadera(double perimetroCadera) {
+	public void setPerimetroCadera(float perimetroCadera) {
 		this.perimetroCadera = perimetroCadera;
 	}
 
-	public double getIcc() {
+	public float getIcc() {
 		return icc;
 	}
 
-	public void setIcc(double icc) {
+	public void setIcc(float icc) {
 		this.icc = icc;
 	}
 
@@ -567,12 +567,12 @@ public class Paciente {
 		this.dosisMedicamento = dosisMedicamento;
 	}
 
-	public String getComienzoMedicamento() {
-		return comienzoMedicamento;
+	public String getDesdeCuandoMedicamento() {
+		return desdeCuandoMedicamento;
 	}
 
-	public void setComienzoMedicamento(String comienzoMedicamento) {
-		this.comienzoMedicamento = comienzoMedicamento;
+	public void setDesdeCuandoMedicamento(String comienzoMedicamento) {
+		this.desdeCuandoMedicamento = comienzoMedicamento;
 	}
 
 	public String getCirugiasPracticadas() {
@@ -690,7 +690,7 @@ public class Paciente {
 		 nombrePaciente="";
 		 fechaPaciente="";
 		 apellidoPaciente="";
-		 matriculaPaciente="";
+		 matriculaPaciente=0;
 		 edad=0;
 		 sexo="";
 		 carrera="";
@@ -754,7 +754,7 @@ public class Paciente {
 		 tomaAlgunMedicamento="";
 		 cualMedicamentoToma="";
 		 dosisMedicamento="";
-		 comienzoMedicamento="";
+		 desdeCuandoMedicamento="";
 		 cirugiasPracticadas="";
 		 especificarCirugias="";
 		

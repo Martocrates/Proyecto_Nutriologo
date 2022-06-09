@@ -25,6 +25,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
+import model.Paciente;
 import model.Usuario;
 
 import javax.swing.JOptionPane;
@@ -37,7 +38,7 @@ import sun.util.logging.PlatformLogger.Level;
  */
 public class FXMLControllerIndicadoresDieteticos implements Initializable {
     
-	Usuario usuario = new Usuario();
+	Paciente paciente = new Paciente();
     
 
     
@@ -45,46 +46,67 @@ public class FXMLControllerIndicadoresDieteticos implements Initializable {
     @FXML private Button btnSiguiente;
     @FXML private Button btnCancelar;
     
+    @FXML private TextField txtFieldComidasAlDia;
+    @FXML private TextField txtFieldDondeCome;
+    @FXML private TextField txtFieldQuienPreparaAlimento;
+    @FXML private TextField txtFieldCambiosHambre;
+    @FXML private TextField txtFieldHaModificadoAlimentacion;
+    @FXML private TextField txtFieldPorQueHaModificadoAlimentacion;
+    
  
     @FXML private void CancelarRegistro(ActionEvent event) {
     	loadStage("/view/Nutriologo/FXMLViewPrincipal.fxml",event);
     }
     @FXML private void AnteriorFormulario(ActionEvent event) {
+    	GuardarRespuestasFormulario();
     	loadStage("/view/Formulario/FXMLViewIndicadoresClinicos.fxml",event);
     }
     @FXML private void SiguienteFormulario(ActionEvent event) {
+    	GuardarRespuestasFormulario();
     	loadStage("/view/Formulario/FXMLViewIndicadoresDieteticosDos.fxml",event);
     }
     
-  
-    
-    
-private void loadStage(String url, Event event){
-    
-    try{
-        ((Node)(event.getSource())).getScene().getWindow().hide();
-        
-        Parent root = FXMLLoader.load(getClass().getResource(url));
-        Scene scene = new Scene(root);
-        Stage newStage = new Stage();
-        newStage.setScene(scene);
-        newStage.show();
-        
-        newStage.setOnCloseRequest(new EventHandler<WindowEvent>(){
-            @Override
-            public void handle(WindowEvent event){
-                Platform.exit();
-            }
-        });
-        
-    }catch(IOException ex){
-      //  Logger.getLogger(ViewLoginController.class.getName()).log(Level.SEVERE,null,ex);
+    private void GuardarRespuestasFormulario() {
+    	
+    	paciente.setComidasAlDia(txtFieldComidasAlDia.getText());
+    	paciente.setDondeCome(txtFieldDondeCome.getText());
+    	paciente.setQuienPreparaAlimentos(txtFieldQuienPreparaAlimento.getText());
+    	paciente.setCambiosEnHambre(txtFieldCambiosHambre.getText());
+    	paciente.setModificacionAlimentacion(txtFieldHaModificadoAlimentacion.getText());
+    	paciente.setRazonDeModificacionAlimentacion(txtFieldPorQueHaModificadoAlimentacion.getText());
+    	
     }
-}
+    
+    public void ObtenerRespuestaFormulario() {
+    	
+    	txtFieldComidasAlDia.setText(paciente.getComidasAlDia());
+    	txtFieldDondeCome.setText(paciente.getDondeCome());
+    	txtFieldQuienPreparaAlimento.setText(paciente.getQuienPreparaAlimentos());
+    	txtFieldCambiosHambre.setText(paciente.getCambiosEnHambre());
+    	txtFieldHaModificadoAlimentacion.setText(paciente.getModificacionAlimentacion());
+    	txtFieldPorQueHaModificadoAlimentacion.setText(paciente.getRazonDeModificacionAlimentacion());
+    }
+    
+    
+    private void loadStage(String url, Event event){
+        
+   	 try {
+
+   	        Parent root = FXMLLoader.load(getClass().getResource(url));
+   	        Scene scene = new Scene(root);
+   	        Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+   	        appStage.setScene(scene);
+   	        appStage.toFront();
+   	        appStage.show();
+
+   	    } catch (Exception e) {
+   	    }
+   }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+    	ObtenerRespuestaFormulario();
     }    
     
 }

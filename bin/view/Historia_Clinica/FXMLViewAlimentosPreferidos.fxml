@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox id="fondo" alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="965.0" stylesheets="@../../Style/style_historiaclinica.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Historia_Clinica.FXMLControllerAlimentosPreferidos">
+   <children>
+      <HBox alignment="CENTER" prefHeight="11.0" prefWidth="965.0">
+         <children>
+            <Label id="titulo" prefHeight="99.0" prefWidth="946.0" text="Historia clínica - Nutricional">
+               <font>
+                  <Font name="Impact" size="69.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="110.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets bottom="30.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <VBox prefHeight="310.0" prefWidth="1366.0">
+               <children>
+                  <HBox prefHeight="40.0" prefWidth="579.0">
+                     <children>
+                        <Label text="Alimentos preferidos:" />
+                        <Text fx:id="txtAlimentosPreferidos" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="449.0">
+                     <children>
+                        <Label text="Alimentos que no agradan / no acostumbra:" />
+                        <Text fx:id="txtAlimentosNoAgradables" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="14.0" prefWidth="279.0">
+                     <children>
+                        <Label text="Alimentos que causan malestar:" />
+                        <Text fx:id="txtAlimentosMalestar" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="14.0" prefWidth="279.0">
+                     <children>
+                        <Label text="Suplementos:" />
+                        <Text fx:id="txtSuplementos" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="14.0" prefWidth="279.0">
+                     <children>
+                        <Label text="Recordatorio de 24 horas:" />
+                        <Text fx:id="txtRecordatorio" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets left="60.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="BOTTOM_RIGHT" prefHeight="163.0" prefWidth="965.0">
+         <children>
+            <Button fx:id="btnAtras" mnemonicParsing="false" onAction="#AtrasFormulario" text="Atras">
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnSalir" mnemonicParsing="false" onAction="#SalirFormulario" text="Salir">
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets top="220.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>

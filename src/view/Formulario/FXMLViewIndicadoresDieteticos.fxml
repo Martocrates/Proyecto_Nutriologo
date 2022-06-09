@@ -48,7 +48,7 @@
                            <font>
                               <Font size="20.0" />
                            </font></Label>
-                        <TextField id="txtfield" prefHeight="31.0" prefWidth="249.0" />
+                        <TextField id="txtfield" fx:id="txtFieldComidasAlDia" prefHeight="31.0" prefWidth="249.0" />
                      </children>
                   </HBox>
                   <HBox prefHeight="56.0" prefWidth="100.0">
@@ -61,7 +61,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <TextField id="txtfield" prefHeight="31.0" prefWidth="249.0" />
+                        <TextField id="txtfield" fx:id="txtFieldDondeCome" prefHeight="31.0" prefWidth="249.0" />
                      </children>
                   </HBox>
                   <HBox prefHeight="56.0" prefWidth="100.0">
@@ -74,7 +74,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <TextField id="txtfield" prefHeight="31.0" prefWidth="249.0" />
+                        <TextField id="txtfield" fx:id="txtFieldQuienPreparaAlimento" prefHeight="31.0" prefWidth="249.0" />
                      </children>
                   </HBox>
                   <HBox prefHeight="56.0" prefWidth="100.0">
@@ -87,7 +87,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <TextField id="txtfield" prefHeight="31.0" prefWidth="249.0" />
+                        <TextField id="txtfield" fx:id="txtFieldCambiosHambre" prefHeight="31.0" prefWidth="249.0" />
                      </children>
                   </HBox>
                   <HBox prefHeight="56.0" prefWidth="100.0">
@@ -100,7 +100,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <TextField id="txtfield" prefHeight="31.0" prefWidth="75.0" />
+                        <TextField id="txtfield" fx:id="txtFieldHaModificadoAlimentacion" prefHeight="31.0" prefWidth="75.0" />
                      </children>
                   </HBox>
                   <HBox prefHeight="56.0" prefWidth="100.0">
@@ -113,7 +113,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <TextField id="txtfield" prefHeight="31.0" prefWidth="249.0" />
+                        <TextField id="txtfield" fx:id="txtFieldPorQueHaModificadoAlimentacion" prefHeight="31.0" prefWidth="249.0" />
                      </children>
                   </HBox>
                </children>
