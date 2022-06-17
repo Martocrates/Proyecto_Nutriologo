@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
@@ -28,16 +29,22 @@
                         <Insets />
                      </HBox.margin>
                   </Label>
-                  <ImageView fitHeight="74.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="110.0" fitWidth="112.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../imagenes/icon_corazon.JPG" />
                      </image>
                   </ImageView>
                </children>
             </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="43.0" prefWidth="965.0" style="-fx-background-color: #fff;">
+               <children>
+                  <TextField fx:id="txtFieldBuscarMatricula" prefHeight="47.0" prefWidth="289.0" promptText="Matricula.." />
+                  <Button fx:id="btnBuscarMatricula" mnemonicParsing="false" onAction="#BuscarPacienteTabla" text="Buscar" />
+               </children>
+            </HBox>
             <HBox prefHeight="277.0" prefWidth="769.0" style="-fx-background-color: #fff;">
                <VBox.margin>
-                  <Insets top="40.0" />
+                  <Insets left="20.0" top="40.0" />
                </VBox.margin>
                <children>
                   <TableView fx:id="tablaPacientes" prefHeight="277.0" prefWidth="639.0">
@@ -59,12 +66,23 @@
                               </Button>
                               <Button fx:id="btnEditar" mnemonicParsing="false" onAction="#eventAction" prefHeight="60.0" prefWidth="153.0" text="Editar" />
                            </children>
+                           <VBox.margin>
+                              <Insets left="30.0" right="30.0" />
+                           </VBox.margin>
                         </HBox>
-                        <Button fx:id="btnVolver" mnemonicParsing="false" onAction="#eventAction" prefHeight="71.0" prefWidth="194.0" text="Volver" />
+                        <Button fx:id="btnVolver" mnemonicParsing="false" onAction="#eventAction" prefHeight="71.0" prefWidth="194.0" text="Volver">
+                           <VBox.margin>
+                              <Insets left="60.0" />
+                           </VBox.margin></Button>
                      </children>
                   </VBox>
                </children>
             </HBox>
+            <Button fx:id="btnActualizar" mnemonicParsing="false" onAction="#ActualizarTabla" text="Actualizar tabla">
+               <VBox.margin>
+                  <Insets right="330.0" top="30.0" />
+               </VBox.margin>
+            </Button>
          </children>
       </VBox>
    </children>

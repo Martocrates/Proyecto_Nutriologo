@@ -101,6 +101,22 @@ public class FXMLControllerDatosBioquimicos implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+
+    	 	txtConsumoTabaco.setText(paciente.getConsumoTabaco());
+    	 	txtFrecuenciaTabaco.setText(paciente.getFrecuenciaTabaco());
+    	    
+    	 	txtConsumoAlcohol.setText(paciente.getConsumoAlcohol());
+    	 	txtFrecuenciaAlcohol.setText(paciente.getFrecuenciaAlcohol());
+    	    
+    	    txtActividadFisica.setText(paciente.getActividadFisica());
+    	    txtFrecuenciaActividadFisica.setText(paciente.getFrecuenciaActividad());
+    	    txtDuracionActividadFisica.setText(paciente.getDuracionActividad());
+    	    
+    	    txtGlucosa.setText(paciente.getGlucosa());
+    	    txtColesterol.setText(paciente.getColesterol());
+    	    txtTrigliceridos.setText(paciente.getTrigliceridos());
+    	    txtAlbumia.setText(paciente.getAlbumia());
+    	    txtOtros.setText(paciente.getOtrosDatosBioquimicos());
     	
     }    
     

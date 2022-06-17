@@ -71,19 +71,32 @@ public class FXMLControllerIndicadoresDieteticosDos implements Initializable {
 	@FXML
 	private void GuardarFormulario(ActionEvent event) {
 		int resp = JOptionPane.showConfirmDialog(null, "Una vez que guarde no se podra eliminar el registro, Desea continuar?");
-		if (JOptionPane.YES_OPTION == resp) {
+		if (JOptionPane.YES_OPTION == resp && paciente.getEditable() == false) {
 		
 			  LocalDate todaysDate = LocalDate.now();
 			  
 			  paciente.setFechaPaciente(todaysDate+"");
 			  
 			  
-			  
+			  GuardarRespuestasFormulario();
 			    miConexion.ingresaPaciente();
 		       
 			loadStage("/view/Nutriologo/FXMLViewPrincipal.fxml", event);
-		} else {
+		} else if (JOptionPane.YES_OPTION == resp && paciente.getEditable() == true) {
 			
+			 LocalDate todaysDate = LocalDate.now();
+			  
+			  paciente.setFechaPaciente(todaysDate+"");
+			
+			GuardarRespuestasFormulario();
+			
+			miConexion.actualizarPaciente();
+			
+			System.out.println("USUARIO EDITADO");
+			
+			paciente.setEditable(false);
+			
+			loadStage("/view/Nutriologo/FXMLViewPrincipal.fxml", event);
 		}
 	
 	}

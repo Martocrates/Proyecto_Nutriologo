@@ -48,7 +48,7 @@
                   </HBox>
                   <HBox prefHeight="14.0" prefWidth="279.0">
                      <children>
-                        <Label text="Expediente " />
+                        <Label text="Matricula: " />
                         <Text fx:id="txtExpediente" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                      </children>
                   </HBox>

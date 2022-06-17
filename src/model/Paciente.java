@@ -42,7 +42,19 @@ public class Paciente {
 	public void setFecha(SimpleStringProperty fecha) {
 		this.fecha = fecha;
 	}
+	private static int expediente;
 	
+	/*Indicadores*/
+	private static boolean editable = false;
+	private static int matriculaActualPaciente;
+	
+	
+	public int getMatriculaActualPaciente() {
+		return matriculaActualPaciente;
+	}
+	public void setMatriculaActualPaciente(int matriculaActualPaciente) {
+		Paciente.matriculaActualPaciente = matriculaActualPaciente;
+	}
 	/*Datos paciente*/
 	private static String nombrePaciente;
 	private static String fechaPaciente;
@@ -130,6 +142,12 @@ public class Paciente {
 	private static String suplementos;
 	private static String recordatorio;
 	
+	public int getExpediente() {
+		return expediente;
+	}
+	public void setExpediente(int expediente) {
+		Paciente.expediente = expediente;
+	}
 	
 	public String getNombrePaciente() {
 		return nombrePaciente;
@@ -148,6 +166,14 @@ public class Paciente {
 	}
 	public void setMatriculaPaciente(int matriculaPaciente) {
 		Paciente.matriculaPaciente = matriculaPaciente;
+	}
+
+	public boolean getEditable() {
+		return editable;
+	}
+
+	public void setEditable(boolean editable) {
+		this.editable = editable;
 	}
 
 	

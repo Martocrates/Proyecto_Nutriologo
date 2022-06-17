@@ -12,6 +12,7 @@ import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -22,10 +23,12 @@ import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import model.Paciente;
+import model.conexion;
 
-public class FXMControllerPrincipalNutriologo {
+public class FXMControllerPrincipalNutriologo implements Initializable{
 	
 	Paciente paciente = new Paciente();
+	conexion miConexion = new conexion();
 	
 	@FXML private TextField txtUser;
     
@@ -45,6 +48,8 @@ public class FXMControllerPrincipalNutriologo {
          Object evt = event.getSource();
          
          if (evt.equals(btnConsultar)){
+        	 
+        	
              
         	  loadStage("/view/Registro_Paciente/FXMLViewRegistroPaciente.fxml",event);
              
@@ -80,5 +85,8 @@ public class FXMControllerPrincipalNutriologo {
     
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+    	
+    	 
+    	
     }    
 }

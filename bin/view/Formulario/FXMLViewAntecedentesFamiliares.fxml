@@ -22,7 +22,7 @@
                   <Insets left="30.0" />
                </HBox.margin>
             </Label>
-            <ImageView fitHeight="52.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="96.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../imagenes/icon_corazon.JPG" />
                </image>

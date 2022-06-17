@@ -103,6 +103,20 @@ Paciente paciente = new Paciente();
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     	
+    	 txtObesidad.setText(paciente.getObesidad());
+    	 txtDiabetes.setText(paciente.getDiabetes());
+    	 txtHTA.setText(paciente.getHta());
+    	    
+    	 txtCancer.setText(paciente.getCancer());
+    	 txtHipercolesterolemia.setText(paciente.getHipercolesterolemia());
+    	 txtHipertrigliceridemia.setText(paciente.getHipertrigliceridemia());
+    	    
+    	 txtPeso.setText(paciente.getPeso()+"");
+    	 txtTalla.setText(paciente.getTalla()+"");
+    	 txtIMC.setText(paciente.getImc()+"");
+    	 txtPerimetroCintura.setText(paciente.getPerimetroCintura()+"");
+    	 txtPerimetroCadera.setText(paciente.getPerimetroCadera()+"");
+    	 txtICC.setText(paciente.getIcc()+"");
     }    
     
 }

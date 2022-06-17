@@ -96,6 +96,20 @@ public class FXMLControllerDatosPersonales implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     	
+    	
+        txtExpediente.setText(paciente.getMatriculaPaciente()+"");
+        txtNombre.setText(paciente.getNombrePaciente());
+        txtApellido.setText(paciente.getApellidoPaciente());
+        txtEdad.setText(paciente.getEdad()+"");
+        txtSexo.setText(paciente.getSexo());
+        txtCarrera.setText(paciente.getCarrera());
+        txtSemestre.setText(paciente.getSemestre()+"");
+        
+        txtTurno.setText(paciente.getTurno());
+        txtFechaNacimiento.setText(paciente.getFechaNacimiento());
+        txtOcupacion.setText(paciente.getOcupacion());
+        txtTelefono.setText(paciente.getTelefono());
+        txtEmail.setText(paciente.getEmail());
     }    
     
 }

@@ -87,7 +87,11 @@ public class FXMLControllerAlimentosPreferidos implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    	
+        txtAlimentosPreferidos.setText(paciente.getAlimentosPreferidos());
+        txtAlimentosNoAgradables.setText(paciente.getAlimentosNoAgradables());
+        txtAlimentosMalestar.setText(paciente.getAlimentosMalestar());
+        txtSuplementos.setText(paciente.getSuplementos());
+        txtRecordatorio.setText(paciente.getRecordatorio());
     }    
     
 }

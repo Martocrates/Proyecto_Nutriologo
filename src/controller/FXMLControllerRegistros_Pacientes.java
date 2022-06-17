@@ -2,6 +2,12 @@ package controller;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -30,13 +36,25 @@ import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import model.Paciente;
 import model.Usuario;
+import model.conexion;
 
 public class FXMLControllerRegistros_Pacientes implements Initializable {
 
 	Usuario usuario = new Usuario();
-
+	Paciente paciente = new Paciente();
+	conexion miConexion = new conexion();
+	
+	ArrayList<String> MATRICULA = new ArrayList<String>(); // Create an ArrayList object
+	ArrayList<String> NOMBRE = new ArrayList<String>(); // Create an ArrayList object
+	ArrayList<String> APELLIDOS = new ArrayList<String>(); // Create an ArrayList object
+	ArrayList<String> FECHA = new ArrayList<String>(); // Create an ArrayList object
+	
+	int contador =0;
 	@FXML
 	private TextField txtUser;
+	
+	@FXML private TextField txtFieldBuscarMatricula;
+	
 	@FXML
 	private PasswordField txtPassword;
 
@@ -46,6 +64,13 @@ public class FXMLControllerRegistros_Pacientes implements Initializable {
 	private Button btnVer;
 	@FXML
 	private Button btnEditar;
+	
+	
+	
+	@FXML private Button btnBuscarMatricula;
+	
+	@FXML
+	private Button btnActualizar;
 //	@FXML private Button btnEliminar;
 
 	// Variables de la tabla
@@ -64,7 +89,7 @@ public class FXMLControllerRegistros_Pacientes implements Initializable {
 
 	private int posicionPersonaEnTabla;
 
-	ObservableList<Paciente> pacientes;
+	ObservableList<Paciente> pacientes = miConexion.getPacientes();
 
 	@FXML
 	private void eventKey(KeyEvent event) {
@@ -101,26 +126,156 @@ public class FXMLControllerRegistros_Pacientes implements Initializable {
 
 		}
 		if (evt.equals(btnVer)) {
+			int matricula = Integer.parseInt(MATRICULA.get(posicionPersonaEnTabla));
+			
+			//System.out.println("Estudiante con matricula: "+matricula);
+			miConexion.obtenerDatosPersonalesPaciente(matricula);
+			miConexion.obtenerAntecedentesFamiliaresPaciente(matricula);
+			miConexion.obtenerDatosAntropologicosPaciente(matricula);
+			miConexion.obtenerDatosBioquimicosPaciente(matricula);
+			miConexion.obtenerIndicadoresDieteticosPaciente(matricula);
+			miConexion.obtenerIndicadoresClinicos(matricula);
+			paciente.setMatriculaPaciente(matricula);
 			
 			
-			Paciente paciente = new Paciente();
-
-			paciente.matricula.set("A1");
-			paciente.nombre.set("A2");
-			paciente.apellido.set("A3");
-			paciente.fecha.set("A4");
-
-			pacientes.add(paciente);
+			loadStage("/view/Historia_Clinica/FXMLViewDatosPersonales.fxml", event);
 		}
 
 		if (evt.equals(btnEditar)) {
+			
+			int matricula = Integer.parseInt(MATRICULA.get(posicionPersonaEnTabla));
+			
+			//System.out.println("Estudiante con matricula: "+matricula);
+			miConexion.obtenerDatosPersonalesPaciente(matricula);
+			miConexion.obtenerAntecedentesFamiliaresPaciente(matricula);
+			miConexion.obtenerDatosAntropologicosPaciente(matricula);
+			miConexion.obtenerDatosBioquimicosPaciente(matricula);
+			miConexion.obtenerIndicadoresDieteticosPaciente(matricula);
+			miConexion.obtenerIndicadoresClinicos(matricula);
+			paciente.setMatriculaPaciente(matricula);
 
+			paciente.setMatriculaActualPaciente(matricula);
+			paciente.setEditable(true);
 			//controller.Historia_Clinica.FXMLControllerDatosPersonales
-			System.out.println("XD");
-			loadStage("/view/Historia_Clinica/FXMLViewDatosPersonales.fxml", event);
+			
+			loadStage("/view/Formulario/FXMLViewDatosPersonales.fxml", event);
 		}
 	}
 
+	@FXML private void BuscarPacienteTabla(ActionEvent event) {
+	
+		pacientes.clear();
+		MATRICULA.clear();
+		NOMBRE.clear();
+		APELLIDOS.clear();
+		FECHA.clear();
+		Paciente paciente = new Paciente();
+		
+		try {
+			Connection miConexion = DriverManager.getConnection("jdbc:mysql://"+"localhost"+":"+"3306"+"/nutritesi","root","");
+		
+			// 5. CREAR OBJETO STATEMENT
+			Statement miStatement = miConexion.createStatement();
+
+			// 6.EJECUTAR LA EJECUCION SQL																			/* ID 1*/
+			ResultSet miResultSet = miStatement.executeQuery("SELECT * FROM estudiantes WHERE matricula = "+txtFieldBuscarMatricula.getText());
+			
+			// 7. Recorrer EL RESULTSET/*
+			
+			while (miResultSet.next()) {
+						
+				MATRICULA.add(miResultSet.getInt("matricula")+"");
+				
+				NOMBRE.add(miResultSet.getString("nombre"));
+				
+				APELLIDOS.add(miResultSet.getString("apellidos"));
+				FECHA.add(miResultSet.getString("fechaRegistro"));
+					
+				contador++;
+			
+			}
+
+			 for (int i = 0; i < MATRICULA.size(); i++) {
+				 
+		        	Paciente p1 = new Paciente();
+		            p1.matricula.set(MATRICULA.get(i));
+		            p1.nombre.set(NOMBRE.get(i));
+		            p1.apellido.set(APELLIDOS.get(i));
+		            p1.fecha.set(FECHA.get(i));
+		            pacientes.add(p1);
+		        }
+		
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		
+	}
+	
+	@FXML private void ActualizarTabla (ActionEvent event) {
+		
+		pacientes.clear();
+		MATRICULA.clear();
+		NOMBRE.clear();
+		APELLIDOS.clear();
+		FECHA.clear();
+		Paciente paciente = new Paciente();
+
+		
+		try {
+			Connection miConexion = DriverManager.getConnection("jdbc:mysql://"+"localhost"+":"+"3306"+"/nutritesi","root","");
+
+				
+			// 5. CREAR OBJETO STATEMENT
+			Statement miStatement = miConexion.createStatement();
+
+			// 6.EJECUTAR LA EJECUCION SQL																			/* ID 1*/
+			ResultSet miResultSet = miStatement.executeQuery("SELECT * FROM estudiantes");
+			
+			// 7. Recorrer EL RESULTSET/*
+			
+			while (miResultSet.next()) {
+				
+				
+				
+				MATRICULA.add(miResultSet.getInt("matricula")+"");
+				
+				NOMBRE.add(miResultSet.getString("nombre"));
+				
+				APELLIDOS.add(miResultSet.getString("apellidos"));
+				FECHA.add(miResultSet.getString("fechaRegistro"));
+					
+				contador++;
+			
+			}
+			
+			
+			 for (int i = 0; i < MATRICULA.size(); i++) {
+				 
+		        	Paciente p1 = new Paciente();
+		            p1.matricula.set(MATRICULA.get(i));
+		            p1.nombre.set(NOMBRE.get(i));
+		            p1.apellido.set(APELLIDOS.get(i));
+		            p1.fecha.set(FECHA.get(i));
+		            pacientes.add(p1);
+		        }
+			
+			/*
+	        for (int i = 0; i < 20; i++) {
+	        	Paciente p1 = new Paciente();
+	            p1.matricula.set("Nombre " + i);
+	            p1.nombre.set("Apellido " + i);
+	            p1.apellido.set("RAA" + i);
+	            p1.fecha.set("67589458" + i);
+	            pacientes.add(p1);
+	        }
+			*/
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 	/**
 	 * Listener de la tabla personas
 	 */
@@ -199,6 +354,7 @@ public class FXMLControllerRegistros_Pacientes implements Initializable {
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
 
+		paciente.setEditable(false);
 		// Inicializamos la tabla
 		this.inicializarTablaPacientes();
 
