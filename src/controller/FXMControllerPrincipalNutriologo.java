@@ -74,7 +74,9 @@ public class FXMControllerPrincipalNutriologo implements Initializable{
    	        Parent root = FXMLLoader.load(getClass().getResource(url));
    	        Scene scene = new Scene(root);
    	        Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+   	    
    	        appStage.setScene(scene);
+   	       
    	        appStage.toFront();
    	        appStage.show();
 

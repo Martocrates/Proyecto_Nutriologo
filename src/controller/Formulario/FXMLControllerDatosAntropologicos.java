@@ -25,6 +25,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
+import model.Mensaje;
 import model.Paciente;
 import model.Usuario;
 
@@ -64,7 +65,15 @@ public class FXMLControllerDatosAntropologicos implements Initializable {
     }
     @FXML private void SiguienteFormulario(ActionEvent event) {
     	GuardarRespuestasFormulario();
-    	loadStage("/view/Formulario/FXMLViewDatosBioquimicos.fxml",event);
+    	
+    	if (Float.parseFloat(txtFieldPeso.getText())<1 || Float.parseFloat(txtFieldTalla.getText())<1 ||Float.parseFloat( txtFieldIMC.getText())< 1 ||
+    			Float.parseFloat(txtFieldPerimetroCintura.getText())<1 || Float.parseFloat(txtFieldPerimetroCadera.getText())<1 || Float.parseFloat(txtFieldICC.getText())<1) {
+    		Mensaje.MostrarMensajeDatosIrreales();
+    	}else {
+    		loadStage("/view/Formulario/FXMLViewDatosBioquimicos.fxml",event);
+    	}
+    	
+    	
     }
     
   
@@ -77,7 +86,7 @@ public class FXMLControllerDatosAntropologicos implements Initializable {
     	 txtFieldICC.setText(paciente.getIcc()+"");
     	
     }
-    private void GuardarRespuestasFormulario() {
+    public void GuardarRespuestasFormulario() {
   //  	Double.parseDouble()
     	   	paciente.setPeso(Float.parseFloat(txtFieldPeso.getText()));
     	    paciente.setTalla(Float.parseFloat(txtFieldTalla.getText()));

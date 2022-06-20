@@ -24,6 +24,7 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import model.Paciente;
@@ -52,6 +53,24 @@ public class FXMLControllerAntecedentesFamiliares implements Initializable {
     @FXML private Button btnSiguiente;
     @FXML private Button btnCancelar;
     
+    @FXML private VBox pageAntecedentesFam;
+    public VBox createPage(int index) {
+    	 
+       
+ 
+    	   Parent root = null;
+		try {
+			root = FXMLLoader.load(getClass().getResource("/view/Formulario/FXMLViewAntecedentesFamiliares.fxml"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+       
+        
+        
+        return (VBox) root;
+    }  
  
     @FXML private void CancelarRegistro(ActionEvent event) {
     	loadStage("/view/Nutriologo/FXMLViewPrincipal.fxml",event);
@@ -69,7 +88,7 @@ public class FXMLControllerAntecedentesFamiliares implements Initializable {
     }
     
   
-    private void GuardarRespuestasFormulario() {
+    public void GuardarRespuestasFormulario() {
     	 if(ChBoxObesidad.isSelected()) {
     		 paciente.setObesidad("Si");
     	 }else {

@@ -26,6 +26,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
+import model.Mensaje;
 import model.Paciente;
 import model.Usuario;
 
@@ -60,6 +61,7 @@ public class FXMLControllerDatosPersonales implements Initializable {
     @FXML private TextField txtFieldTelefono;
     @FXML private TextField txtFieldEmail;
     
+  
     
  
     @FXML private void CancelarRegistro(ActionEvent event) {
@@ -68,14 +70,36 @@ public class FXMLControllerDatosPersonales implements Initializable {
     @FXML private void SiguienteFormulario(ActionEvent event) {
     	
     	
+    	GuardarRespuestasFormulario();
+    	
+    	if(txtFieldNombre.getText().isEmpty() || txtFieldApellido.getText().isEmpty() || txtFieldMatricula.getText().isEmpty() || 
+    			txtFieldEdad.getText().isEmpty() || txtFieldSexo.getText().isEmpty() || txtFieldCarrera.getText().isEmpty() || 
+    			txtFieldSemestre.getText().isEmpty() || txtFieldTurno.getText().isEmpty() || txtFieldFechaNacimiento.getText().isEmpty() || 
+    			txtFieldOcupacion.getText().isEmpty() || txtFieldTelefono.getText().isEmpty() || txtFieldEmail.getText().isEmpty() ) {
+    		Mensaje.MostrarMensajeDatosIncompletos();
+    	}else {
+    		loadStage("/view/Formulario/FXMLViewAntecedentesFamiliares.fxml",event);
+    	}
+    	
+    	
+    
+    }
+  
+    public void GuardarRespuestasFormulario() {
+    	
+
+
     	paciente.setMatriculaPaciente(Integer.parseInt(txtFieldMatricula.getText()));
     	paciente.setNombrePaciente(txtFieldNombre.getText());
+    	
     	paciente.setApellidoPaciente(txtFieldApellido.getText());	
     	LocalDate todaysDate = LocalDate.now();
     	paciente.fecha.set(todaysDate+"");
     	paciente.setFechaPaciente(todaysDate+"");
     	
+    	
     	paciente.setEdad(Integer.parseInt(txtFieldEdad.getText()));
+    
     	paciente.setSexo(txtFieldSexo.getText());
     	paciente.setCarrera(txtFieldCarrera.getText());
     	paciente.setSemestre(Integer.parseInt(txtFieldSemestre.getText()));
@@ -84,12 +108,7 @@ public class FXMLControllerDatosPersonales implements Initializable {
     	paciente.setOcupacion(txtFieldOcupacion.getText());
     	paciente.setTelefono(txtFieldTelefono.getText());
     	paciente.setEmail(txtFieldEmail.getText());
-    	
-    	
-    	
-    	loadStage("/view/Formulario/FXMLViewAntecedentesFamiliares.fxml",event);
     }
-  
     
     
     private void loadStage(String url, Event event){
@@ -99,6 +118,7 @@ public class FXMLControllerDatosPersonales implements Initializable {
    	        Parent root = FXMLLoader.load(getClass().getResource(url));
    	        Scene scene = new Scene(root);
    	        Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+   	        
    	        appStage.setScene(scene);
    	        appStage.toFront();
    	        appStage.show();
@@ -110,8 +130,9 @@ public class FXMLControllerDatosPersonales implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    	
+   
     	txtFieldNombre.setText(paciente.getNombrePaciente());
+    	
     	txtFieldApellido.setText(paciente.getApellidoPaciente());
     	txtFieldEdad.setText(paciente.getEdad()+"");
     	txtFieldSexo.setText(paciente.getSexo());
@@ -124,6 +145,7 @@ public class FXMLControllerDatosPersonales implements Initializable {
     	txtFieldTelefono.setText(paciente.getTelefono());
     	txtFieldEmail.setText(paciente.getEmail());
     	txtFieldMatricula.setText(paciente.getMatriculaPaciente()+"");
+
     }    
     
 }

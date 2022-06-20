@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox id="fondo" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="965.0" stylesheets="@../../Style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Formulario.FXMLControllerAntecedentesFamiliares">
+<VBox id="fondo" fx:id="pageAntecedentesFam" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="965.0" stylesheets="@../../Style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Formulario.FXMLControllerAntecedentesFamiliares">
    <children>
       <HBox alignment="CENTER" prefHeight="34.0" prefWidth="965.0">
          <children>
@@ -35,7 +35,7 @@
             <Insets bottom="30.0" />
          </VBox.margin>
       </HBox>
-      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="747.0">
+      <VBox alignment="BOTTOM_RIGHT" prefHeight="200.0" prefWidth="747.0">
          <children>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
@@ -141,9 +141,9 @@
             </HBox>
          </children>
       </VBox>
-      <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
+      <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Button fx:id="btnAtras" mnemonicParsing="false" onAction="#AnteriorFormulario" prefHeight="74.0" prefWidth="163.0" text="Atras">
+            <Button fx:id="btnAtras" mnemonicParsing="false" onAction="#AnteriorFormulario" text="Atras">
                <HBox.margin>
                   <Insets right="30.0" />
                </HBox.margin>
@@ -151,7 +151,7 @@
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#CancelarRegistro" prefHeight="74.0" prefWidth="163.0" text="Cancelar">
+            <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#CancelarRegistro" text="Cancelar">
                <HBox.margin>
                   <Insets right="30.0" />
                </HBox.margin>
@@ -159,7 +159,7 @@
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button fx:id="btnSiguiente" mnemonicParsing="false" onAction="#SiguienteFormulario" prefHeight="74.0" prefWidth="163.0" text="Siguiente">
+            <Button fx:id="btnSiguiente" mnemonicParsing="false" onAction="#SiguienteFormulario" text="Siguiente">
                <HBox.margin>
                   <Insets right="60.0" />
                </HBox.margin>

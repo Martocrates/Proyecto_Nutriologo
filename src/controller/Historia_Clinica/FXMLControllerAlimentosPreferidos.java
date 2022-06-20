@@ -62,7 +62,7 @@ public class FXMLControllerAlimentosPreferidos implements Initializable {
     
     @FXML private void AtrasFormulario(ActionEvent event) {
     	 
-    	loadStage("/view/Historia_Clinica/FXMLViewDatosBioquimicos.fxml", event);
+    	loadStage("/view/Historia_Clinica/FXMLViewIndicadoresDieteticos.fxml", event);
   
     }
     

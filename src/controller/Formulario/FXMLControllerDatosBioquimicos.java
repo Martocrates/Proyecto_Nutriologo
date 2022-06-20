@@ -25,6 +25,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
+import model.Mensaje;
 import model.Paciente;
 import model.Usuario;
 
@@ -71,13 +72,25 @@ public class FXMLControllerDatosBioquimicos implements Initializable {
     }
     @FXML private void SiguienteFormulario(ActionEvent event) {
     	 GuardarRespuestasFormulario();
-    	loadStage("/view/Formulario/FXMLViewIndicadoresClinicos.fxml",event);
+    	 
+    	 if(txtFieldConsumoTabaco.getText().isEmpty() || txtFieldTabacoFrecuencia.getText().isEmpty() || txtFieldConsumoAlcohol.getText().isEmpty() || txtFieldAlcoholFrecuencia.getText().isEmpty() ||
+    			 txtFieldActividadFisica.getText().isEmpty() ||txtFieldActividadFisicaFrecuencia.getText().isEmpty() ||txtFieldActividadFisicaDuracion.getText().isEmpty() ||
+    			 txtFieldGlucosa.getText().isEmpty() || txtFieldColesterol.getText().isEmpty() ||txtFieldTrigliceridos.getText().isEmpty() ||txtFieldAlbumia.getText().isEmpty() ||
+    			 txtFieldOtros.getText().isEmpty()) {
+    		 
+    		 Mensaje.MostrarMensajeDatosIncompletos();
+    	 }else {
+    	    	loadStage("/view/Formulario/FXMLViewIndicadoresClinicos.fxml",event);
+    	 }
+    	 
+    	 
+
     }
     
   
     
     
-    private void GuardarRespuestasFormulario() {
+    public void GuardarRespuestasFormulario() {
     	
     	paciente.setConsumoTabaco(txtFieldConsumoTabaco.getText());
     	paciente.setFrecuenciaTabaco(txtFieldTabacoFrecuencia.getText());

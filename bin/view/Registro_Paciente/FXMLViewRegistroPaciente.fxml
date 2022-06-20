@@ -39,10 +39,14 @@
             <HBox alignment="TOP_CENTER" prefHeight="43.0" prefWidth="965.0" style="-fx-background-color: #fff;">
                <children>
                   <TextField fx:id="txtFieldBuscarMatricula" prefHeight="47.0" prefWidth="289.0" promptText="Matricula.." />
-                  <Button fx:id="btnBuscarMatricula" mnemonicParsing="false" onAction="#BuscarPacienteTabla" text="Buscar" />
+                  <Button fx:id="btnBuscarMatricula" mnemonicParsing="false" onAction="#BuscarPacienteTabla" text="Buscar">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
                </children>
             </HBox>
-            <HBox prefHeight="277.0" prefWidth="769.0" style="-fx-background-color: #fff;">
+            <HBox alignment="CENTER" prefHeight="277.0" prefWidth="769.0" style="-fx-background-color: #fff;">
                <VBox.margin>
                   <Insets left="20.0" top="40.0" />
                </VBox.margin>
@@ -55,11 +59,16 @@
                         <TableColumn fx:id="fecha" minWidth="0.0" prefWidth="238.99996948242188" text="FECHA" />
                     </columns>
                   </TableView>
-                  <VBox alignment="BOTTOM_LEFT" prefHeight="277.0" prefWidth="307.0">
+                  <VBox prefHeight="277.0" prefWidth="307.0">
                      <children>
+                        <Button fx:id="btnVolver" mnemonicParsing="false" onAction="#eventAction" prefHeight="60.0" prefWidth="240.0" text="Volver">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Button>
                         <HBox alignment="BASELINE_LEFT" prefHeight="100.0" prefWidth="353.0">
                            <children>
-                              <Button fx:id="btnVer" mnemonicParsing="false" onAction="#eventAction" prefHeight="60.0" prefWidth="136.0" text="Ver">
+                              <Button fx:id="btnVer" mnemonicParsing="false" onAction="#eventAction" text="Ver">
                                  <HBox.margin>
                                     <Insets right="10.0" />
                                  </HBox.margin>
@@ -67,14 +76,13 @@
                               <Button fx:id="btnEditar" mnemonicParsing="false" onAction="#eventAction" prefHeight="60.0" prefWidth="153.0" text="Editar" />
                            </children>
                            <VBox.margin>
-                              <Insets left="30.0" right="30.0" />
+                              <Insets right="30.0" />
                            </VBox.margin>
                         </HBox>
-                        <Button fx:id="btnVolver" mnemonicParsing="false" onAction="#eventAction" prefHeight="71.0" prefWidth="194.0" text="Volver">
-                           <VBox.margin>
-                              <Insets left="60.0" />
-                           </VBox.margin></Button>
                      </children>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
                   </VBox>
                </children>
             </HBox>

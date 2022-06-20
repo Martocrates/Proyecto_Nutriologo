@@ -70,7 +70,7 @@ public class FXMLControllerDatosBioquimicos implements Initializable {
     
     @FXML private void SiguienteFormulario(ActionEvent event) {
     	 
-    	loadStage("/view/Historia_Clinica/FXMLViewAlimentosPreferidos.fxml", event);
+    	loadStage("/view/Historia_Clinica/FXMLViewIndicadoresClinicos.fxml", event);
   
     }
     

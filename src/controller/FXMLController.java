@@ -23,6 +23,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import model.Usuario;
@@ -46,6 +47,8 @@ public class FXMLController implements Initializable {
     @FXML
     private PasswordField txtPassword;
     
+
+    
     @FXML
     private Button btnLogin;
     
@@ -56,7 +59,7 @@ public class FXMLController implements Initializable {
    
     @FXML
     private void eventAction(ActionEvent event){
-        
+    	
         
          Object evt = event.getSource();
          
@@ -97,7 +100,7 @@ public class FXMLController implements Initializable {
     	Platform.exit();
        // System.exit(0);
     }
-    
+   
     private void loadStage(String url, Event event){
         
    	 try {
@@ -105,6 +108,8 @@ public class FXMLController implements Initializable {
    	        Parent root = FXMLLoader.load(getClass().getResource(url));
    	        Scene scene = new Scene(root);
    	        Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+   	     
+   	        
    	        appStage.setScene(scene);
    	        appStage.toFront();
    	        appStage.show();
@@ -116,6 +121,9 @@ public class FXMLController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+    
+  	       
+    	
     }    
     
 }

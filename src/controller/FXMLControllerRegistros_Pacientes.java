@@ -158,7 +158,7 @@ public class FXMLControllerRegistros_Pacientes implements Initializable {
 			paciente.setEditable(true);
 			//controller.Historia_Clinica.FXMLControllerDatosPersonales
 			
-			loadStage("/view/Formulario/FXMLViewDatosPersonales.fxml", event);
+			loadStage("/view/Formulario/FXMLViewPaginacion.fxml", event);
 		}
 	}
 

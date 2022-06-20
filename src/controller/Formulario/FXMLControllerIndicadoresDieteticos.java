@@ -25,6 +25,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
+import model.Mensaje;
 import model.Paciente;
 import model.Usuario;
 
@@ -63,10 +64,19 @@ public class FXMLControllerIndicadoresDieteticos implements Initializable {
     }
     @FXML private void SiguienteFormulario(ActionEvent event) {
     	GuardarRespuestasFormulario();
-    	loadStage("/view/Formulario/FXMLViewIndicadoresDieteticosDos.fxml",event);
+    	
+    	if(txtFieldComidasAlDia.getText().isEmpty() ||txtFieldDondeCome.getText().isEmpty() ||txtFieldQuienPreparaAlimento.getText().isEmpty() ||
+    			txtFieldCambiosHambre.getText().isEmpty() ||txtFieldHaModificadoAlimentacion.getText().isEmpty() ||txtFieldPorQueHaModificadoAlimentacion.getText().isEmpty() ) 
+    	{
+    		Mensaje.MostrarMensajeDatosIncompletos();
+    	}else {
+    		loadStage("/view/Formulario/FXMLViewIndicadoresDieteticosDos.fxml",event);
+    	}
+    	
+    	
     }
     
-    private void GuardarRespuestasFormulario() {
+    public void GuardarRespuestasFormulario() {
     	
     	paciente.setComidasAlDia(txtFieldComidasAlDia.getText());
     	paciente.setDondeCome(txtFieldDondeCome.getText());

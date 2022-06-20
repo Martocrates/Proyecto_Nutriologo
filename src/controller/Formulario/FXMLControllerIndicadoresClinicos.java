@@ -25,6 +25,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
+import model.Mensaje;
 import model.Paciente;
 import model.Usuario;
 
@@ -72,7 +73,23 @@ public class FXMLControllerIndicadoresClinicos implements Initializable {
     @FXML private TextField txtFieldAlgunaCirugia;
     @FXML private TextField txtFieldEspecificarCirugia;
     
- 
+    @FXML private void SiguienteFormulario(ActionEvent event) {
+    	GuardarRespuestasFormulario();
+    	
+    	if (txtFieldPelo.getText().isEmpty() || txtFieldUnia.getText().isEmpty() ||txtFieldPiel.getText().isEmpty() ||txtFieldDiarrea.getText().isEmpty() ||
+    			txtFieldEstrenimiento.getText().isEmpty() ||txtFieldVomito.getText().isEmpty() ||txtFieldColitis.getText().isEmpty() ||txtFieldPirosis.getText().isEmpty() ||
+    			txtFieldGastritis.getText().isEmpty() ||txtFieldUlcera.getText().isEmpty() ||txtFieldOjos.getText().isEmpty() ||txtFieldDentadura.getText().isEmpty() ||
+    			txtFieldHidratacion.getText().isEmpty() ||txtFieldNauseas.getText().isEmpty() ||txtFieldOtros.getText().isEmpty() ||
+    			txtFieldEnfermedadDiagnosticada.getText().isEmpty() ||txtFieldMedicamentoTomado.getText().isEmpty() ||txtFieldCualMedicamentoTomado.getText().isEmpty() ||
+    			txtFieldDosisMedicamentoTomado.getText().isEmpty() ||txtFieldDesdeCuandoMedicamento.getText().isEmpty() ||txtFieldAlgunaCirugia.getText().isEmpty() ||
+    			txtFieldEspecificarCirugia.getText().isEmpty() ) {
+    		
+    		Mensaje.MostrarMensajeDatosIncompletos();
+    	}else {
+        	loadStage("/view/Formulario/FXMLViewIndicadoresDieteticos.fxml",event);
+
+    	}
+    }
     @FXML private void CancelarRegistro(ActionEvent event) {
     	loadStage("/view/Nutriologo/FXMLViewPrincipal.fxml",event);
     }
@@ -80,13 +97,10 @@ public class FXMLControllerIndicadoresClinicos implements Initializable {
     	GuardarRespuestasFormulario();
     	loadStage("/view/Formulario/FXMLViewDatosBioquimicos.fxml",event);
     }
-    @FXML private void SiguienteFormulario(ActionEvent event) {
-    	GuardarRespuestasFormulario();
-    	loadStage("/view/Formulario/FXMLViewIndicadoresDieteticos.fxml",event);
-    }
+  
     
   
-    private void GuardarRespuestasFormulario() {
+    public void GuardarRespuestasFormulario() {
     	
     	paciente.setPelo(txtFieldPelo.getText());
         paciente.setUnias(txtFieldUnia.getText());

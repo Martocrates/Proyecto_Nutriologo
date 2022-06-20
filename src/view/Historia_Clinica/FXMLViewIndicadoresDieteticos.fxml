@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox id="fondo" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="965.0" stylesheets="@../../Style/style_historiaclinica.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Historia_Clinica.FXMLControllerIndicadoresDieteticos">
+   <children>
+      <HBox alignment="CENTER" prefHeight="30.0" prefWidth="965.0">
+         <children>
+            <Label id="titulo" prefHeight="74.0" prefWidth="758.0" text="Historia clínica - Nutricional">
+               <font>
+                  <Font name="System Bold" size="50.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="100.0" />
+               </HBox.margin>
+            </Label>
+            <ImageView fitHeight="100.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../imagenes/icon_corazon.JPG" />
+               </image>
+               <HBox.margin>
+                  <Insets left="80.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+         <VBox.margin>
+            <Insets bottom="30.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="315.0" prefWidth="832.0">
+         <children>
+            <VBox prefHeight="315.0" prefWidth="860.0">
+               <children>
+                  <HBox prefHeight="56.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Comidas al día:">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font></Label>
+                        <Text fx:id="txtComidasAlDia" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="56.0" prefWidth="100.0">
+                     <children>
+                        <Label text="¿Dónde come?:">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Text fx:id="txtDondeCome" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="56.0" prefWidth="100.0">
+                     <children>
+                        <Label text="¿Quién prepara los alimentos?:">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Text fx:id="txtQuienPreparaAlimentos" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="56.0" prefWidth="100.0">
+                     <children>
+                        <Label text="¿Cambios en hambre? / ¿Apático?:">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Text fx:id="txtCambiosHambre" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="53.0" prefWidth="857.0">
+                     <children>
+                        <Label prefHeight="50.0" prefWidth="708.0" text="¿Ha modificado su alimentación en los últimos 6 meses?:" wrapText="true">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Text fx:id="txtHaModificadoAlimentacion" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="56.0" prefWidth="100.0">
+                     <children>
+                        <Label text="¿Por qué?:">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Text fx:id="txtPorqueHaModificadoAlimentacion" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="TOP_RIGHT" prefHeight="73.0" prefWidth="965.0">
+         <children>
+            <Button fx:id="btnAtras" mnemonicParsing="false" onAction="#AnteriorFormulario" prefHeight="74.0" prefWidth="163.0" text="Atras">
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#CancelarRegistro" prefHeight="74.0" prefWidth="163.0" text="Salir">
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnSiguiente" mnemonicParsing="false" onAction="#SiguienteFormulario" prefHeight="74.0" prefWidth="163.0" text="Siguiente">
+               <HBox.margin>
+                  <Insets right="60.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets top="40.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>
